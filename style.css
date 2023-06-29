@@ -1,0 +1,192 @@
+/* globa variables */
+:root {
+  margin: 0;
+  padding: 0;
+
+  --black-color: #00100b;
+  --font-color: #dccde8;
+  --background: rgb(68, 3, 129);
+  --brown: #886f68;
+  --blue-hover-main: #2596be;
+  --transition-speed: 600ms;
+}
+
+/* background images */
+
+body {
+  margin: 0;
+  background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/boiskoLubnice.jpg");
+  background-size: cover;
+  min-height: 100svh;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100svh;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+/* content align / decorate */
+/* grid arrangemnet */
+
+.grid-arrange {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 100svh;
+  gap: 0;
+}
+
+.menu-block {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: absolute;
+  float: left;
+  width: 45svw;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+
+.grid-arrange > .herb {
+  grid-row: 1;
+  grid-column: 3;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-block button {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.title {
+  grid-row: 3;
+  grid-column: 3;
+}
+
+/* grid items colors/fonts/sizes */
+
+.menu-block button {
+  font-size: 5rem;
+  color: var(--font-color);
+  transition: var(--transition-speed);
+  background-color: rgba(68, 3, 129, 0.7);
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 5rem;
+  color: var(--font-color);
+}
+/* main nav bar */
+.menu-block .dropdown > button {
+  transition: var(--transition-speed);
+}
+.menu-block .dropdown > button > a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: var(--font-color);
+}
+
+.menu-block > .dropdown-1:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
+
+/* Dropdown menu 1 */
+
+.menu-block > .dropdown-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu-block > .dropdown-1 .dropdown {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  transition: var(--transition-speed);
+}
+
+.menu-block > .dropdown-1:hover > .dropdown {
+  transform: translate(-2rem, 0rem);
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  transition: var(--transition-speed);
+}
+
+.menu-block .dropdown > button {
+  font-size: 1rem;
+}
+
+.menu-block > .dropdown-1 > .dropdown > button:hover {
+  background-color: var(--blue-hover-main);
+  font-size: 1rem;
+}
+
+/* Dropdwon menu 2 */
+
+.menu-block > .dropdown-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-block > .dropdown-2 .dropdown {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-block > .dropdown-2:hover > .dropdown {
+  transform: translate(-2rem, 0rem);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown menu 3 */
+
+.menu-block > .dropdown-3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-block > .dropdown-3 .dropdown {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-block > .dropdown-3:hover > .dropdown {
+  transform: translate(-2rem, 0rem);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* dropdown menu 4 */
+
+.menu-block > .dropdown-4 {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-block > .dropdown-4 .dropdown {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-block > .dropdown-4:hover > .dropdown {
+  transform: translate(-2rem, 0rem);
+  opacity: 1;
+  visibility: visible;
+}
