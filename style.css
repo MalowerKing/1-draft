@@ -6,23 +6,133 @@
   --black-color: #00100b;
   --font-color: #dccde8;
   --background: rgb(68, 3, 129);
-  --brown: #886f68;
+  --brown: rgb(136, 111, 104);
   --blue-hover-main: #2596be;
   --transition-speed: 600ms;
+}
+
+/* Animations */
+
+@-webkit-keyframes kenburns-top {
+  0% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/Dzietrzkowice.jpg");
+  }
+  10% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/Dzietrzkowice.jpg");
+  }
+  20% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/Wojcin.jpg");
+  }
+  30% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/halaDzietrzkowice.jpg");
+  }
+  40% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/boiskoLubnice.jpg");
+  }
+  50% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/szkolaWojcin.jpg");
+  }
+  60% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/1.JPG");
+  }
+  70% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/2.jpg");
+  }
+  80% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/4.JPG");
+  }
+  90% {
+    /*manipulate background-size with the animation isntead*/
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/6.jpg");
+  }
+  100% {
+    background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/7.JPG");
+  }
+}
+
+@-webkit-keyframes opacity-top {
+  0% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  10% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  20% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  30% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  40% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  50% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 1);
+  }
+  60% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  70% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  80% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  90% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  100% {
+    /*manipulate background-size with the animation isntead*/
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* background images */
 
 body {
   margin: 0;
-  background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/boiskoLubnice.jpg");
   background-size: cover;
-  min-height: 100svh;
+  color: white;
+  font-family: "Open Sans", sans-serif !important;
+  background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/boiskoLubnice.jpg");
+  background-position: center;
+  /*removed background-size*/
+  /*add no-repeat rule*/
+  background-repeat: no-repeat;
+  animation-name: kenburns-top;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
 }
 
 .background {
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 100svh;
+  animation-name: opacity-top;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
 }
 
 body::-webkit-scrollbar {
@@ -30,14 +140,6 @@ body::-webkit-scrollbar {
 }
 
 /* content align / decorate */
-/* grid arrangemnet */
-
-.grid-arrange {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  min-height: 100svh;
-  gap: 0;
-}
 
 .menu-block {
   display: flex;
@@ -47,61 +149,64 @@ body::-webkit-scrollbar {
   float: left;
   width: 45svw;
   min-height: 100vh;
-  flex-grow: 1;
+  justify-content: space-evenly;
+  background-color: rgba(136, 111, 104, 0.6);
 }
 
-.grid-arrange > .herb {
-  grid-row: 1;
-  grid-column: 3;
+.herb {
+  position: fixed;
+  top: 0rem;
+  right: 0vw;
   display: block;
   margin: 0 auto;
-}
-
-.menu-block button {
-  height: 100%;
-  width: 100%;
-  border: none;
+  padding: 1rem;
 }
 
 .title {
-  grid-row: 3;
-  grid-column: 3;
+  position: fixed;
+  right: 4vw;
+  bottom: 0rem;
+  font-size: clamp(4rem, 6vw, 12rem);
+  color: var(--font-color);
 }
 
 /* grid items colors/fonts/sizes */
 
 .menu-block button {
-  font-size: 5rem;
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: clamp(3rem, 4.5vw, 8rem);
   color: var(--font-color);
   transition: var(--transition-speed);
-  background-color: rgba(68, 3, 129, 0.7);
+  background-color: rgba(136, 111, 104, 0.7);
   flex-wrap: nowrap;
   white-space: nowrap;
-  flex-grow: 1;
 }
 
-.title {
-  font-size: 5rem;
-  color: var(--font-color);
-}
 /* main nav bar */
 .menu-block .dropdown > button {
   transition: var(--transition-speed);
+  border-left: 1px solid var(--font-color);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
+
 .menu-block .dropdown > button > a {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: clamp(1rem, 2vw, 6rem);
   color: var(--font-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
+
+/* Dropdown menu 1 */
 
 .menu-block > .dropdown-1:hover .main-header {
   background-color: var(--blue-hover-main);
   transform: scale(0.3, 1);
   transform: translate(-2rem, 0rem);
 }
-
-/* Dropdown menu 1 */
-
 .menu-block > .dropdown-1 {
   display: flex;
   flex-direction: row;
@@ -115,6 +220,8 @@ body::-webkit-scrollbar {
   visibility: hidden;
   width: 0;
   transition: var(--transition-speed);
+  transition-delay: 250ms;
+  row-gap: 0.3rem;
 }
 
 .menu-block > .dropdown-1:hover > .dropdown {
@@ -125,20 +232,17 @@ body::-webkit-scrollbar {
   transition: var(--transition-speed);
 }
 
-.menu-block .dropdown > button {
-  font-size: 1rem;
-}
-
-.menu-block > .dropdown-1 > .dropdown > button:hover {
-  background-color: var(--blue-hover-main);
-  font-size: 1rem;
-}
-
 /* Dropdwon menu 2 */
+.menu-block > .dropdown-2:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
 
 .menu-block > .dropdown-2 {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .menu-block > .dropdown-2 .dropdown {
@@ -146,18 +250,30 @@ body::-webkit-scrollbar {
   flex-direction: row;
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  transition: var(--transition-speed);
+  transition-delay: 250ms;
 }
+
 .menu-block > .dropdown-2:hover > .dropdown {
   transform: translate(-2rem, 0rem);
   opacity: 1;
   visibility: visible;
+  width: 85%;
+  transition: var(--transition-speed);
 }
 
 /* Dropdown menu 3 */
+.menu-block > .dropdown-3:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
 
 .menu-block > .dropdown-3 {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .menu-block > .dropdown-3 .dropdown {
@@ -165,18 +281,30 @@ body::-webkit-scrollbar {
   flex-direction: row;
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  transition: var(--transition-speed);
+  transition-delay: 250ms;
 }
+
 .menu-block > .dropdown-3:hover > .dropdown {
   transform: translate(-2rem, 0rem);
   opacity: 1;
   visibility: visible;
+  width: 100%;
+  transition: var(--transition-speed);
 }
 
 /* dropdown menu 4 */
+.menu-block > .dropdown-4:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
 
 .menu-block > .dropdown-4 {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .menu-block > .dropdown-4 .dropdown {
@@ -184,9 +312,74 @@ body::-webkit-scrollbar {
   flex-direction: row;
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  transition: var(--transition-speed);
+  transition-delay: 250ms;
 }
+
 .menu-block > .dropdown-4:hover > .dropdown {
   transform: translate(-2rem, 0rem);
   opacity: 1;
   visibility: visible;
+  width: 100%;
+  transition: var(--transition-speed);
+}
+
+/* Menu dropdown tile 5 */
+
+.menu-block > .dropdown-5:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
+
+.menu-block > .dropdown-5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu-block > .dropdown-5 .dropdown {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  transition: var(--transition-speed);
+  transition-delay: 250ms;
+}
+
+.menu-block > .dropdown-5:hover > .dropdown {
+  transform: translate(-2rem, 0rem);
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  transition: var(--transition-speed);
+}
+
+/* Transmisja z Sesji */
+
+.menu-block > .dropdown-6:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
+.menu-block > .dropdown-6 .main-header {
+  background-color: rgba(220, 53, 69, 0.7);
+}
+
+/* Powiadomienia SMS */
+
+.menu-block > .dropdown-7:hover .main-header {
+  background-color: var(--blue-hover-main);
+  transform: scale(0.3, 1);
+  transform: translate(-2rem, 0rem);
+}
+.menu-block > .dropdown-7 .main-header {
+  background-color: rgba(255, 193, 7, 0.7);
+}
+
+.menu-block .dropdown > button:hover {
+  background-color: var(--blue-hover-main);
+  font-size: 1rem;
 }
