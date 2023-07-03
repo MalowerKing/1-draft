@@ -63,38 +63,48 @@
   0% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.5);
+    background-position: 20%;
   }
   10% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.6);
+    background-position: 30%;
   }
   20% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.7);
+    background-position: 40%;
   }
   30% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.8);
+    background-position: 50%;
   }
   40% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.9);
+    background-position: 60%;
   }
   50% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 1);
+    background-position: 70%;
   }
+
   60% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.9);
+    background-position: 80%;
   }
   70% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.8);
+    background-position: 90%;
   }
   80% {
     /*manipulate background-size with the animation isntead*/
     background-color: rgba(0, 0, 0, 0.7);
+    background-position: 100%;
   }
   90% {
     /*manipulate background-size with the animation isntead*/
@@ -110,11 +120,11 @@
 
 body {
   margin: 0;
-  background-size: cover;
+  background-size: 110vmax;
   color: var(--font-color);
   font-family: "Open Sans", sans-serif !important;
   background-image: url("https://uglubnice.com.pl/wp-content/themes/lubnice/img/boiskoLubnice.jpg");
-  background-position: center;
+  background-position: center 40%;
   /*removed background-size*/
   /*add no-repeat rule*/
   background-repeat: no-repeat;
