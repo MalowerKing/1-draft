@@ -1,0 +1,20 @@
+:root {
+  margin: 0;
+  padding: 0;
+
+  --black-color: #00100b;
+  --font-color: #dccde8;
+  --background: rgb(68, 3, 129);
+  --brown: rgb(136, 111, 104);
+  --blue-hover-main: #2596be;
+  --transition-speed: 600ms;
+}
+
+body {
+  margin: 0;
+  background-size: cover;
+  color: var(--font-color);
+  font-family: "Open Sans", sans-serif !important;
+  background-color: rgb(100, 100, 100);
+  background-position: center;
+}
